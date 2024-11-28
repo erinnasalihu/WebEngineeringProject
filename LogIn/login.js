@@ -41,11 +41,16 @@ document.getElementById('loginForm').addEventListener('submit', validateLoginFor
 
 const passwordInput = document.getElementById('password');
 const togglePassword = document.getElementById('togglePassword');
-const eyeIcon = document.getElementById('eyeIcon');
+const passwordEyeIcon = document.getElementById('passwordEyeIcon');
+
 
 togglePassword.addEventListener('click', function () {
-    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordInput.setAttribute('type', type);
-    eyeIcon.classList.toggle('fa-eye');
-    eyeIcon.classList.toggle('fa-eye-slash');
+     const currentType = passwordInput.getAttribute('type');
+    
+    const newType = currentType === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', newType);
+
+    
+    passwordEyeIcon.classList.toggle('fa-eye');
+    passwordEyeIcon.classList.toggle('fa-eye-slash');
 });

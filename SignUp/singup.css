@@ -1,0 +1,14 @@
+#togglePassword, #toggleConfirmPassword {
+    position: absolute; 
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%); 
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#passwordEyeIcon, #confirmPasswordEyeIcon {
+    font-size: 10px; 
+    color: #656565; 
+}
