@@ -4,15 +4,17 @@ function validateSignupForm(event){
     const email=document.getElementById('email').value.trim();
     const password=document.getElementById('password').value.trim();
     const confirmPassword = document.getElementById('confirmPassword').value.trim();
+    
     const usernameError=document.getElementById('usernameError');
     const emailError=document.getElementById('emailError');
     const passwordError=document.getElementById('passwordError');
     const confirmPasswordError = document.getElementById('confirmPasswordError');
-
+   
     usernameError.textContent='';
     emailError.textContent='';
     passwordError.textContent='';
     confirmPasswordError.textContent = '';
+
 
 
     if(username===''){
