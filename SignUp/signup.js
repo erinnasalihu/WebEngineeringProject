@@ -54,3 +54,25 @@ function isValidEmail(email){
    
 }
 document.getElementById('signupForm').addEventListener('submit', validateSignupForm);
+
+const passwordInput = document.getElementById('password');
+const togglePassword = document.getElementById('togglePassword');
+const passwordEyeIcon = document.getElementById('passwordEyeIcon');
+
+togglePassword.addEventListener('click', function () {
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    passwordEyeIcon.classList.toggle('fa-eye');
+    passwordEyeIcon.classList.toggle('fa-eye-slash');
+});
+
+const confirmPasswordInput = document.getElementById('confirm-password');
+const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+const confirmPasswordEyeIcon = document.getElementById('confirmPasswordEyeIcon');
+
+toggleConfirmPassword.addEventListener('click', function () {
+    const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    confirmPasswordInput.setAttribute('type', type);
+    confirmPasswordEyeIcon.classList.toggle('fa-eye');
+    confirmPasswordEyeIcon.classList.toggle('fa-eye-slash');
+});
