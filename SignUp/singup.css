@@ -1,14 +1,172 @@
-#togglePassword, #toggleConfirmPassword {
-    position: absolute; 
-    right: 10px; 
+body, h1, h2, p, a, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif; 
+    background: linear-gradient(to bottom, #919d7c, #9ba38b); 
+    color: #3C4F2F; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.signup-container {
+    background: #FFFFFF;
+    padding: 30px 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #E3D9C6;
+    position: relative;
+    overflow: hidden;
+}
+
+form h2 {
+    font-family: 'Playfair Display', serif;
+    color: #3C4F2F;
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border: 1.5px solid #C7C3B5;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    background: #FAFAFA;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding: 12px 15px;
+    padding-right: 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    background: #FAFAFA;
+    border: 1.5px solid #C7C3B5;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.password-container input:focus {
+    outline: none;
+    border-color: #556B2F;
+    box-shadow: 0 4px 8px rgba(85, 107, 47, 0.2);
+}
+
+.password-container button {
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%); 
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+}
+
+.password-container button:hover {
+    color:#3C4F2F;
+}
+
+button.signup-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background: linear-gradient(to right, #6D8F45, #556B2F);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+button.signup-button:hover {
+    background: linear-gradient(to right, #556B2F, #6D8F45); 
+    transform: translateY(-2px);
+}
+
+p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #3C4F2F;
+}
+
+p a {
+    font-weight: bolder;
+}
+
+#googleSignInDiv {
+    margin-top: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4285F4;
+    color: #FFFFFF;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#googleSignInDiv:hover {
+    background-color: #3367D6;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 20px 25px;
+    }
+    form h2 {
+        font-size: 24px;
+    }
+    input, button {
+        font-size: 14px;
+    }
+}
+
+#togglePassword, #toggleConfirmPassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     background: none;
     border: none;
     cursor: pointer;
 }
 
 #passwordEyeIcon, #confirmPasswordEyeIcon {
-    font-size: 10px; 
-    color: #656565; 
+    font-size: 16px; 
+    color: #656565;
+    transition: color 0.3s ease;
+}
+
+#togglePassword:hover #passwordEyeIcon, 
+#toggleConfirmPassword:hover #confirmPasswordEyeIcon {
+    color: #3C4F2F; 
 }
