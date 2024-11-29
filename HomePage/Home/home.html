@@ -5,28 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel=stylesheet>
 </head>
 <body>
     <header>
-        <div class="navbar">
+        <div class="top">
+            <h2>Your Ingredients, Our Inspiration </h2> 
+        </div>
+        <div class="header-content">
+            <img src="./THOK-logo.png" alt="Logo" class="logo">
+            
+            <input type="text" placeholder="Search" class="search-bar">
+            <a href="/LogIn/login.html">
+                <button class="login-btn">Log In</button>
+            </a>                    
+        </div>
+        <nav class="navbar">
             <a href="home.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="ingredients.html">Ingredients</a>
             <a href="profile.html">Profile</a>
-        </div>
+        </nav>
     </header>
     <div class="content">
-        <img src="logo.png" alt="Logo">
-        <h1>What are we making today, chef?</h1>
+        <br><br>
+        <h1 class="wave-text">What are we making today, Chef?</h1>
+        <br>
+        
         <div class="categories">
             <div class="category">
                 <a href="sweet.html">
-                    <img src="sweet.jpg" alt="Sweet">
+                    <img src="./Sweet n Savory/Sweet.jpg" alt="Sweet">
+                    <span class="category-title">Sweet</span>
                 </a>
             </div>
+
+            <div class="or-divider">or</div>
             <div class="category">
                 <a href="savory.html">
-                    <img src="savory.jpg" alt="Savory">
+                    <img src="./Sweet n Savory/Savory.jpg" alt="Savory">
+                    <span class="category-title">Savory</span>
                 </a>
             </div>
         </div>
