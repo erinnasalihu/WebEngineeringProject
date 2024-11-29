@@ -48,6 +48,29 @@ header {
     order: 0; 
     margin-right: 10px; 
 }
+.search-bar {
+    flex-grow: 0.5;
+    padding: 10px;
+    border-radius: 9px;
+    border: none;
+    font-size: 16px;
+    margin-right: 10px;  
+}
+
+.login-btn {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px 15px;
+    background-color: #3C4F2F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background-color: #475d3b;
+}
 
 
 
