@@ -26,7 +26,7 @@ body {
 header {
     width: 100%;
     background: #556B2F;
-    padding: 10px 20px;
+    padding: 5px 10px;
     position: sticky;
     border-bottom: 1px solid #ddd;
     top: 0;
@@ -36,46 +36,30 @@ header {
 
 .header-content {
     display: flex;
-    justify-content: center; 
-    align-items: center;
+    justify-content: flex-start; 
+    align-items: center; 
     width: 100%;
+    padding-left: 50px; 
 }
 
 .logo {
-    width: 170px;
+    width: 150px;
     height: auto;
-    order:0 ;
-    margin-right: 10px;
+    order: 0; 
+    margin-right: 10px; 
 }
 
-.search-bar {
-    flex-grow: 0.5;
-    padding: 10px;
-    border-radius: 9px;
-    border: none;
-    font-size: 16px;
-    margin-right: 10px;  
-}
 
-.login-btn {
-    font-family: 'Times New Roman', Times, serif;
-    padding: 10px 15px;
-    background-color: #3C4F2F;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
 
-.login-btn:hover {
-    background-color: #475d3b;
-}
+
+
+
 
 .navbar {
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding:2px 0;
 }
 
 .navbar a {
@@ -197,7 +181,7 @@ footer {
     background: #556B2F;
     color: #FAF3E0;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     margin-top: auto;
     width: 100%;
 }
