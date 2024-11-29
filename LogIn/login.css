@@ -5,9 +5,9 @@ body, h1, h2, p, a, input, button {
 }
 
 body {
-    font-family: 'Playfair Display', serif; /* Elegant Serif font */
-    background: linear-gradient(to bottom, #FAF3E0, #EAE1CF); /* Subtle gradient background */
-    color: #3C4F2F; /* Dark Olive text */
+    font-family: 'Playfair Display', serif; 
+    background: linear-gradient(to bottom,#919d7cE0, #9ba38b); 
+    color: #3C4F2F; 
     display: flex;
     justify-content: center;
     align-items: center;
