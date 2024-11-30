@@ -184,7 +184,7 @@ p a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #4285F4;
+    background: white;
     color: #FFFFFF;
     border-radius: 8px;
     cursor: pointer;
@@ -196,9 +196,28 @@ p a {
 }
 
 #googleSignInDiv:hover {
-    background-color: #3367D6;
+    background-color: #ffffff;
     transform: translateY(-2px);
 }
+
+#googleSignInDiv span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.divider {
+    margin: 20px 0;
+    text-align: center;
+    color: #3C4F2F;
+    font-size: 16px;
+}
+
+.divider span {
+    background-color: #fff;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
 
 @media (max-width: 480px) {
     .login-container {
