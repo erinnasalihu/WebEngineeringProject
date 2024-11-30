@@ -1,3 +1,23 @@
+import { initializeApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDxlSpdPDZAT1r9dPgz_LvBftwRMam7i7Q",
+  authDomain: "the-olive-kitchen.firebaseapp.com",
+  projectId: "the-olive-kitchen",
+  storageBucket: "the-olive-kitchen.firebasestorage.app",
+  messagingSenderId: "979701422960",
+  appId: "1:979701422960:web:2fc744b671a2afe66e0db5"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase Authentication and Google Provider
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
 function validateLoginForm(event) {
     event.preventDefault();
 
@@ -37,68 +57,31 @@ function isValidUsername(input) {
 }
 
 
-// Function to initialize Google Sign-In
-function onLoad() {
-    google.accounts.id.initialize({
-        client_id: '1083477586589-dkq0g5879mouf85r7senerroiobi33d1.apps.googleusercontent.com',  // Use your actual Google OAuth2 client ID here
-        callback: handleCredentialResponse
-    });
 
-    // Render the Google Sign-In button
-    google.accounts.id.renderButton(
-        document.getElementById("googleSignInDiv"),
-        {
-            theme: "outline", // Choose button style
-            size: "large", // Choose button size
-            text: "Sign in with Google" // Custom button text
-        }
-    );
-}
 
-// This is the callback function that will handle the response after successful login
-function handleCredentialResponse(response) {
-    const responsePayload = decodeJwtResponse(response.credential);
-    console.log("ID Token: ", responsePayload);
-    
-    const userName = responsePayload.name;
-    const userEmail = responsePayload.email;
-    
-    // Store the user information in localStorage or wherever necessary
-    window.localStorage.setItem('user', JSON.stringify({
-        name: userName,
-        email: userEmail
-    }));
-
-    // Redirect to the profile page after successful login
-    window.location.href = getRedirectURL();
-}
-
-// Decode JWT (JSON Web Token) response
-function decodeJwtResponse(token) {
-    const base64Url = token.split('.')[1];
-    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-    }).join(''));
-    return JSON.parse(jsonPayload);
-}
-
-// Helper function to get the redirect URL based on the environment
-function getRedirectURL() {
-    if (window.location.hostname === '127.0.0.1') {
-        // Local development
-        return 'http://127.0.0.1:5500/HomePage/Profile/profile.html';
-    } else {
-        // Production (GitHub Pages)
-        return 'https://erinnasalihu.github.io/WebEngineeringProject/HomePage/Profile/profile.html';
-    }
-}
-
-// Initialize on page load
-window.onload = function() {
-    onLoad();
-};
-
+document.getElementById('googleSignInBtn').addEventListener('click', () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        // User successfully signed in
+        const user = result.user;
+        console.log('User Info:', {
+          name: user.displayName,
+          email: user.email
+        });
+  
+        // Optional: Store user info in localStorage
+        localStorage.setItem('user', JSON.stringify({
+          name: user.displayName,
+          email: user.email
+        }));
+  
+        // Redirect to the profile page
+        window.location.href = '../Profile/profile.html'; // Adjust the redirect URL
+      })
+      .catch((error) => {
+        console.error('Error during sign-in:', error.message);
+      });
+  });
 
 document.getElementById('loginForm').addEventListener('submit', validateLoginForm);
 
