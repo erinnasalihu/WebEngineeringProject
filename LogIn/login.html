@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="login.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel=stylesheet>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.3.0/firebase-auth.js"></script>
 </head>
 <body>
     <header>
@@ -40,7 +42,11 @@
         <button type="submit" class="login-button">Log in</button> 
         </form>
         <p>Don't have an account? <a href="/SignUp/signup.html">Sign up instead</a></p>
-        <div id="googleSignInDiv" class="google-signin"></div>
+        <div class="divider">
+            <span>or</span>
+        </div>
+        <button id="googleSignInBtn">Sign in with Google</button>
+
     </div>
     <script src="login.js"></script>
     <footer>
