@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
-// Firebase configuration
+
 const firebaseConfig = {
   apiKey: "AIzaSyDxlSpdPDZAT1r9dPgz_LvBftwRMam7i7Q",
   authDomain: "the-olive-kitchen.firebaseapp.com",
@@ -11,10 +11,10 @@ const firebaseConfig = {
   appId: "1:979701422960:web:2fc744b671a2afe66e0db5"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 
-// Initialize Firebase Authentication and Google Provider
+
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
@@ -62,21 +62,21 @@ function isValidUsername(input) {
 document.getElementById('googleSignInBtn').addEventListener('click', () => {
     signInWithPopup(auth, provider)
       .then((result) => {
-        // User successfully signed in
+       
         const user = result.user;
         console.log('User Info:', {
           name: user.displayName,
           email: user.email
         });
   
-        // Optional: Store user info in localStorage
+        
         localStorage.setItem('user', JSON.stringify({
           name: user.displayName,
           email: user.email
         }));
   
-        // Redirect to the profile page
-        window.location.href = '../Profile/profile.html'; // Adjust the redirect URL
+      
+        window.location.href = '../Profile/profile.html'; 
       })
       .catch((error) => {
         console.error('Error during sign-in:', error.message);

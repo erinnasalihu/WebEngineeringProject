@@ -378,6 +378,15 @@ footer {
     margin-top: auto;
 }
 
+footer a[href^="tel:"] {
+    color: inherit ;
+}
+
+
+footer a[href^="tel:"]:hover {
+    color:#444; 
+}
+
 @media (max-width: 768px) {
     .navbar {
         display: none;
