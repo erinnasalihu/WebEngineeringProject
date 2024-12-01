@@ -9,6 +9,12 @@
 </head>
 <body>
     <header>
+        <div class="olive-branch left">
+            <img src="./olive-1.png" alt="Left Olive Branch">
+        </div>
+        <div class="olive-branch right">
+            <img src="./olive-2.png" alt="Right Olive Branch">
+        </div>
         <div class="top">
             <h4>Your Ingredients, Our Inspiration </h4> 
         </div>
@@ -17,7 +23,7 @@
                 <img src="./THOK-logo.png" alt="Logo" class="logo">
                 <nav class="navbar">
                     <a href="/HomePage/Home/home.html">Home</a>
-                    <a href="/HomePage/About/about.html">About Us</a>
+                    <a href="/HomePage/About/about.html">AboutUs</a>
                     <a href="/HomePage/Ingredients/ingredients.html">Ingredients</a>
                     <a href="/HomePage/Profile/profile.html">Profile</a>
                 </nav>
@@ -28,9 +34,13 @@
                     <input type="text" placeholder="Search" class="search-bar">
                 </div>
                 <span class="search-icon"></span>
-                <div class="profile-icon"><img src="/HomePage/Home/search.png" alt="search"></div>
+                <div class="profile-icon">
+                    <img src="/HomePage/Home/search-icon.png" alt="search">
+                </div>
                 <div class="header-actions">
-                    <div class="profile-icon" onclick="toggleProfileMenu()"><img src="/HomePage/Home/profile-icon.png" alt="profile-icon"></div>
+                    <div class="profile-icon" onclick="toggleProfileMenu()">
+                        <img src="/HomePage/Home/profile-icon.png" alt="profile-icon">
+                    </div>
                     <div class="profile-menu">
                         <a href="/LogIn/login.html">Log In</a>
                         <a href="/SignUp/signup.html">Sign Up</a>
@@ -57,19 +67,9 @@
             </div>
         </div>
     </div>
-
+    <script src="home.js"></script>
     <footer>
         © 2024 All rights reserved | Contact us: <a href="tel:+1234567890">+123-456-7890</a>
     </footer>
-
-    <script>
-        function toggleNavbar() {
-            document.querySelector('.navbar').classList.toggle('active');
-        }
-
-        function toggleProfileMenu() {
-            document.querySelector('.profile-icon').classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
