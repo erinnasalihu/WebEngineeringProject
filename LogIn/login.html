@@ -13,20 +13,40 @@
 </head>
 <body>
     <header>
-        <div class="top">
-            <h2>Your Ingredients, Our Inspiration </h2> 
+    </div>
+    <div class="top">
+        <h4>Your Ingredients, Our Inspiration </h4> 
+    </div>
+    <div class="header-container">
+        <div class="header-left">
+            <img src="/HomePage/Home/THOK-logo.png" alt="Logo" class="logo">
+            <nav class="navbar">
+                <a href="/HomePage/Home/home.html">Home</a>
+                <a href="/HomePage/About/about.html">AboutUs</a>
+                <a href="/HomePage/Ingredients/ingredients.html">Ingredients</a>
+                <a href="/HomePage/Profile/profile.html">Profile</a>
+            </nav>
         </div>
-        <div class="header-content">
-            <img src="" alt="Logo" class="logo">
-            
+        <div class="header-right">
+            <button class="navigation-menu" onclick="toggleNavbar()">&#9776;</button>
+            <div class="search-container">
+                <input type="text" placeholder="Search" class="search-bar">
+            </div>
+            <span class="search-icon"></span>
+            <div class="profile-icon">
+                <img src="/HomePage/Home/search-icon.png" alt="search">
+            </div>
+            <div class="header-actions">
+                <div class="profile-icon" onclick="toggleProfileMenu()">
+                    <img src="/HomePage/Home/profile-icon.png" alt="profile-icon">
+                </div>
+                <div class="profile-menu">
+                </div>
+            </div>
         </div>
-        <div class="navbar">
-            <a href="/HomePage/Home/home.html">Home</a>
-            <a href="/HomePage/About/about.html">About Us</a>
-            <a href="/HomePage/Ingredients/ingredients.html">Ingredients</a>
-            <a href="/HomePage/Profile/profile.html">Profile</a>
-        </div>
+    </div>
     </header>
+    <br><br>
     <div class="login-container">
         <form id="loginForm">
             <h2>Log In</h2>
