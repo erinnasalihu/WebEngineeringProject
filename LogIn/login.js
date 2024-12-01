@@ -1,22 +1,4 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDxlSpdPDZAT1r9dPgz_LvBftwRMam7i7Q",
-  authDomain: "the-olive-kitchen.firebaseapp.com",
-  projectId: "the-olive-kitchen",
-  storageBucket: "the-olive-kitchen.firebasestorage.app",
-  messagingSenderId: "979701422960",
-  appId: "1:979701422960:web:2fc744b671a2afe66e0db5"
-};
-
-
-const app = initializeApp(firebaseConfig);
-
-
-const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
 
 function validateLoginForm(event) {
     event.preventDefault();
@@ -55,33 +37,6 @@ function isValidUsername(input) {
     const usernameRegex = /^[a-zA-Z0-9_.-]+$/; 
     return usernameRegex.test(input);
 }
-
-
-
-
-document.getElementById('googleSignInBtn').addEventListener('click', () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-       
-        const user = result.user;
-        console.log('User Info:', {
-          name: user.displayName,
-          email: user.email
-        });
-  
-        
-        localStorage.setItem('user', JSON.stringify({
-          name: user.displayName,
-          email: user.email
-        }));
-  
-      
-        window.location.href = '../Profile/profile.html'; 
-      })
-      .catch((error) => {
-        console.error('Error during sign-in:', error.message);
-      });
-  });
 
 document.getElementById('loginForm').addEventListener('submit', validateLoginForm);
 
