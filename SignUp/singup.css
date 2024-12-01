@@ -108,6 +108,21 @@ input:focus {
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
+.have-acc {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #3C4F2F;
+}
+/*
+.have-acc a {
+    
+    transition: color 0.3s ease;
+}
+
+.have-acc a:hover {
+    color: #748b4a;
+}*/
 
 .password-container button:hover {
     color: #8a9a5b;
