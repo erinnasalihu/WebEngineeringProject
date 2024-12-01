@@ -7,7 +7,7 @@ body, h1, h2, p, a, input, button {
 body {
     position: relative;
     font-family: 'Fredoka One', cursive;
-    background: linear-gradient(to bottom, #e7f0b5c5, #EAE1CF); /* Retain the existing gradient */
+    background: linear-gradient(to bottom, #e7f0b5c5, #EAE1CF);
     color: #3C4F2F;
     margin: 0;
     min-height: 100vh;
@@ -19,12 +19,12 @@ body {
 
 header {
     width: 100%;
-    max-width: 1200px; 
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #5f7141;
-    border-style:inset;
+    border-style: inset;
     border-top-color: #A7B98A;
     border-bottom-color: #444;
     border-right: #A7B98A;
@@ -48,9 +48,9 @@ header {
 
 .header-container {
     width: 100%;
-    max-width: 1200px; 
+    max-width: 1200px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -105,7 +105,7 @@ header {
     color: white;
     font-size: 30px;
     cursor: pointer;
-} 
+}
 
 .search-container {
     display: flex;
@@ -126,18 +126,17 @@ header {
 }
 
 .search-icon {
-    width: 0; 
+    width: 0;
     height: 0;
-    background-color: transparent; 
-    border-radius: 50%; 
-    display: none; 
+    background-color: transparent;
+    border-radius: 50%;
+    display: none;
     justify-content: center;
     align-items: center;
     color: white;
     cursor: pointer;
     font-size: 22px;
 }
-
 
 .search-icon img {
     width: 100%;
@@ -180,7 +179,7 @@ header {
 
 .profile-menu {
     display: none;
-    position:fixed;
+    position: fixed;
     background-color: #3C4F2F;
     right: 0;
     top: 50px;
@@ -197,7 +196,6 @@ header {
     display: block;
     text-align: center;
     font-size: 16px;
-
 }
 
 .profile-menu.active {
@@ -206,7 +204,7 @@ header {
 
 .profile-menu a:hover {
     background-color: #d2deb8;
-    border-radius:inherit;
+    border-radius: inherit;
 }
 
 @media (max-width: 768px) {
@@ -229,7 +227,12 @@ header {
     text-align: center;
     min-height: 50vh;
     max-height: 50vh;
-    
+    animation: popUp 0.5s ease-out;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 .login-container h2 {
@@ -240,97 +243,95 @@ header {
 
 .login-container input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 12px 20px;
+    margin: 15px 0;
     border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
+    border-radius: 25px;
+    font-size: 1rem;
+    background: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #8a9a5b;
+    box-shadow: 0 0 10px rgba(138, 154, 91, 0.3);
+    outline: none;
 }
 
 .password-container {
-    display: flex;
-    align-items: center;
     position: relative;
-    z-index: 1;
-}
-
-.password-container input {
-    flex: 1;
 }
 
 .password-container button {
     position: absolute;
-    right: 10px;
-    top: 12px;
-    background: none;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
     border: none;
+    background: none;
     cursor: pointer;
-    color: #3C4F2F;
-    font-size: 16px;
+    color: #888;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.password-container button:hover {
+    color: #8a9a5b;
 }
 
 .login-button {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
+    background: #8a9a5b;
+    color: #fff;
     border: none;
-    border-radius: 8px;
-    background-color: #5f7141;
-    color: #FAF3E0;
-    font-size: 18px;
+    border-radius: 25px;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .login-button:hover {
-    background: linear-gradient(to right, #556B2F, #6D8F45); 
-    transform: translateY(-2px);
+    background: #748b4a;
+    transform: scale(1.05);
+}
+
+.login-button:active {
+    transform: scale(0.95);
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
     }
 
-    
-.login-container p {
-    margin-top: 15px;
-    font-size: 14px;
+    .navbar.active {
+        display: flex;
+    }
+
+    .search-container {
+        display: none;
+    }
 }
 
-.login-container a {
-    text-decoration: none;
-    color: #5f7141;
-    font-weight: bold;
+@media (max-width: 480px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-container h2 {
+        font-size: 20px;
+    }
+
+    .header-left .navbar {
+        font-size: 16px;
+    }
 }
 
-.login-container a:hover {
-    color: #3C4F2F;
-}
-
-.divider {
-    margin: 15px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #444;
-}
-
-.divider span {
-    background: #FAF3E0;
-    padding: 0 10px;
-}
-
-#googleSignInBtn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    background-color: #DB4437;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
-}
-
-#googleSignInBtn:hover {
-    background-color: #C33B2D;
-}
 
 footer {
     margin-top: auto;
@@ -350,12 +351,11 @@ footer {
 }
 
 footer a[href^="tel:"] {
-    color: inherit ;
+    color: inherit;
 }
 
-
 footer a[href^="tel:"]:hover {
-    color:#444; 
+    color:#444;
 }
 
 @media (max-width: 768px) {
@@ -388,7 +388,7 @@ footer a[href^="tel:"]:hover {
     }
 
     .header-left .navbar {
-        font-size: 16px; ;
+        font-size: 16px;
     }
 }
 
@@ -400,7 +400,7 @@ footer a[href^="tel:"]:hover {
 
 @media (max-width: 768px) {
     .navbar {
-        display: none; 
+        display: none;
         flex-direction: column;
         align-items: center;
     }
@@ -408,4 +408,41 @@ footer a[href^="tel:"]:hover {
     .navbar.active {
         display: flex;
     }
+}
+
+#googleSignInBtn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: #DB4437;  
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#googleSignInBtn:hover {
+    background-color: #C33B2D; 
+    transform: translateY(-2px);
+}
+
+#googleSignInBtn:active {
+    transform: translateY(2px);
+}
+
+#googleSignInBtn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+#googleSignInBtn .text {
+    font-size: 16px;
 }
