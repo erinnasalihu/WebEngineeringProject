@@ -23,10 +23,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #5f7141;
+    background-color: #6c8a4a;
     border-style: inset;
     border-top-color: #A7B98A;
-    border-bottom-color: #444;
+    border-bottom-color: #A7B98A;
     border-right: #A7B98A;
     border-left: #d2deb8;
     padding: 10px 20px;
@@ -300,24 +300,6 @@ input:focus {
     transform: scale(0.95);
 }
 
-
-
-@media (max-width: 768px) {
-    .navbar {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .search-container {
-        display: none;
-    }
-}
-
 @media (max-width: 480px) {
     .login-container {
         padding: 20px;
@@ -343,7 +325,7 @@ footer {
 
 footer {
     width: 100%;
-    background-color: #687a4a;
+    background-color: #6c8a4a;
     color: #FAF3E0;
     text-align: center;
     padding: 10px 0;
@@ -358,25 +340,6 @@ footer a[href^="tel:"]:hover {
     color:#444;
 }
 
-@media (max-width: 768px) {
-    .navbar {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .navigation-menu {
-        display: block;
-    }
-
-    .search-container {
-        display: none;
-    }
-}
 
 @media (max-width: 480px) {
     .login-container {
@@ -400,13 +363,20 @@ footer a[href^="tel:"]:hover {
 
 @media (max-width: 768px) {
     .navbar {
-        display: none;
+        display: none; 
         flex-direction: column;
         align-items: center;
     }
 
     .navbar.active {
-        display: flex;
+        display: flex; 
+    }
+
+    .navigation-menu {
+        display: block;     
+    }
+    .search-container {
+        display: none;
     }
 }
 
