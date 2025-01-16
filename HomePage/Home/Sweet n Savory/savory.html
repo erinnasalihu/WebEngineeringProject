@@ -3,106 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="savory.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <div class="logo-content">
-                <img src="logo.png" alt="Olive's Kitchen Logo">
-                <h1>Olive's Kitchen</h1>
-            <a href="home.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="ingredients.html">Ingredients</a>
-            <a href="profile.html">Profile</a>
-            <div class="savory-content">
-                
-                <h1>Savory Recipes</h1>
-                <p>Find the best savory recipes according to your liking or pick the ingredients you have and let us help you make a choice!</p>
-                
-               
-                <div class="recipe">
-                    <h2>Cheese Omelette</h2>
-                    <img src="cheese-omelette.jpg" alt="Cheese Omelette">
-                    <h3>Ingredients:</h3>
-                    <ul>
-                        <li>Eggs</li>
-                        <li>Milk</li>
-                        <li>Cheese (grated)</li>
-                        <li>Butter</li>
-                        <li>Salt and pepper</li>
-                    </ul>
-                    <h3>Instructions:</h3>
-                    <p>Whisk eggs with a splash of milk, salt, and pepper. Melt butter in a pan and pour in the egg mixture. Add grated cheese before folding the omelette in half.</p>
+        <div class="olive-branch left">
+            <img src="/HomePage/Home/olive-1.png" alt="Left Olive Branch">
+        </div>
+        <div class="olive-branch right">
+            <img src="/HomePage/Home/olive-2.png" alt="Right Olive Branch">
+        </div>
+        <div class="top">
+            <h4>Your Ingredients, Our Inspiration </h4> 
+        </div>
+        <div class="header-container">
+            <div class="header-left">
+                <img src="/HomePage/Home/THOK-logo.png" alt="Logo" class="logo">
+                <nav class="navbar">
+                    <a href="/HomePage/Home/home.html">Home</a>
+                    <a href="/HomePage/About/about.html">AboutUs</a>
+                    <a href="/HomePage/Ingredients/ingredients.html">Ingredients</a>
+                    <a href="/HomePage/Profile/profile.html">Profile</a>
+                </nav>
+            </div>
+            <div class="header-right">
+                <button class="navigation-menu" onclick="toggleNavbar()">&#9776;</button>
+                <div class="search-container">
+                    <input type="text" placeholder="Search" class="search-bar">
                 </div>
-        
-               
-                <div class="recipe">
-                    <h2>Veggie Fritters</h2>
-                    <img src="veggie-fritters.jpg" alt="Veggie Fritters">
-                    <h3>Ingredients:</h3>
-                    <ul>
-                        <li>Flour</li>
-                        <li>Egg</li>
-                        <li>Grated vegetables (like zucchini, carrot, or potato)</li>
-                        <li>Salt and pepper</li>
-                        <li>Oil (for frying)</li>
-                    </ul>
-                    <h3>Instructions:</h3>
-                    <p>Mix grated vegetables with flour, an egg, salt, and pepper to form a batter. Heat oil in a skillet and drop spoonfuls of the mixture into the pan. Fry until golden on both sides.</p>
+                <span class="search-icon"></span>
+                <div class="profile-icon">
+                    <img src="/HomePage/Home/search-icon.png" alt="search">
                 </div>
-        
-                
-                <div class="recipe">
-                    <h2>Garlic Bread Toast</h2>
-                    <img src="garlic-bread-toast.jpg" alt="Garlic Bread Toast">
-                    <h3>Ingredients:</h3>
-                    <ul>
-                        <li>Bread (any kind)</li>
-                        <li>Butter</li>
-                        <li>Garlic (minced or powdered)</li>
-                        <li>Salt</li>
-                        <li>Herbs (optional, like parsley or oregano)</li>
-                    </ul>
-                    <h3>Instructions:</h3>
-                    <p>Mix softened butter with garlic and salt. Spread on bread slices and toast in a pan or oven until golden. Sprinkle with herbs for extra flavor.</p>
-                </div>
-        
-                
-                <div class="recipe">
-                    <h2>Simple Pasta Sauce with Egg</h2>
-                    <img src="pasta-sauce-egg.jpg" alt="Simple Pasta Sauce with Egg">
-                    <h3>Ingredients:</h3>
-                    <ul>
-                        <li>Eggs</li>
-                        <li>Butter</li>
-                        <li>Milk (optional)</li>
-                        <li>Salt and pepper</li>
-                        <li>Garlic (optional)</li>
-                    </ul>
-                    <h3>Instructions:</h3>
-                    <p>Boil pasta (you can use basic flour-based pasta or make fresh dough). Sauté garlic in butter, scramble an egg into the pan, and mix with milk or pasta water. Combine with cooked pasta and season with salt and pepper.</p>
-                </div>
-        
-               
-                <div class="recipe">
-                    <h2>Savory Crepes</h2>
-                    <img src="savory-crepes.jpg" alt="Savory Crepes">
-                    <h3>Ingredients:</h3>
-                    <ul>
-                        <li>Flour</li>
-                        <li>Milk</li>
-                        <li>Eggs</li>
-                        <li>Butter (for cooking)</li>
-                        <li>Cheese or vegetables (for filling)</li>
-                    </ul>
-                    <h3>Instructions:</h3>
-                    <p>Make a batter with flour, milk, eggs, and a pinch of salt. Cook thin crepes in a buttered skillet. Fill with cheese, sautéed vegetables, or ham before folding and serving.</p>
-                </div>
-                <div class="search-cta">
-                    <p>Do you want to search recipes by ingredients? Click the button below!</p>
-                   <button> <a href="ingredients.html">Search by Ingredients</a></button> 
+                <div class="header-actions">
+                    <div class="profile-icon" onclick="toggleProfileMenu()">
+                        <img src="/HomePage/Home/profile-icon.png" alt="profile-icon">
+                    </div>
+                    <div class="profile-menu">
+                        <a href="/LogIn/login.html">Log In</a>
+                        <a href="/SignUp/signup.html">Sign Up</a>
+                    </div>
                 </div>
             </div>
+        </div>
+    </header>
+        
+             <div class="slider">
+
+                    <div class="list">
+                        <div class="item" >
+                            <img src="./1.png">
+                        </div>
+                        <div class="item active">
+                            <img src="./2.png">
+                        </div>
+                        <div class="item">
+                            <img src="./3.png">
+                        </div>
+                        <div class="item">
+                            <img src="./4.png">
+                        </div>
+                        <div class="item">
+                            <img src="./5.png">
+                        </div>
+                    </div>
+                    
+                    <div class="content">
+                        <button>See More</button>
+            
+                    </div>
+                    <div class="arow">
+                        <button id="prev"><</button>
+                        <button id="next">></button>
+                    </div>
+                </div>
+            
+            
+                <script src="savory.js"></script>
+                <footer>
+                    © 2024 All rights reserved | Contact us: <a href="tel:">+123-456-7890</a>
+                </footer>
 </body>
 </html>
