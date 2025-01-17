@@ -220,15 +220,7 @@ h1 {
     width: 60%;
     filter: drop-shadow(0 0 20px #000);
 }
-.slider .content{
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: #eee;
-    width: max-content;
-}
+
 .slider .content div:nth-child(2){
     font-size: 5rem;
     text-transform: uppercase;
