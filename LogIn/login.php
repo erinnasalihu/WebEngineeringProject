@@ -1,4 +1,41 @@
 
+<?php
+require '../connection/connect.php';
+
+session_start();
+
+$db = new DatabaseConnection();
+$conn = $db->startConnection();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = trim($_POST['email']);
+    $password = $_POST['password'];
+
+    if (empty($email) || empty($password)) {
+        echo "Të gjitha fushat janë të detyrueshme!";
+        exit;
+    }
+
+    try {
+        $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email");
+        $stmt->execute([':email' => $email]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user && password_verify($password, $user['password'])) {
+            $_SESSION['user_id'] = $user['id'];
+            header("Location: home.php");
+            exit;
+        } else {
+            echo "Email ose fjalëkalimi i gabuar!";
+        }
+    } catch (PDOException $e) {
+        error_log("Gabim në pyetjen SQL: " . $e->getMessage());
+        echo "Ndodhi një gabim. Ju lutem provoni përsëri.";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +58,7 @@
         <div class="header-left">
             <img src="/HomePage/Home/THOK-logo.png" alt="Logo" class="logo">
             <nav class="navbar">
-                <a href="/HomePage/Home/home.html">Home</a>
+                <a href="/HomePage/Home/home.php">Home</a>
                 <a href="/HomePage/About/about.html">AboutUs</a>
                 <a href="/HomePage/Ingredients/ingredients.html">Ingredients</a>
                 <a href="/HomePage/Profile/profile.html">Profile</a>
@@ -48,7 +85,7 @@
     </header>
     <br><br>
     <div class="login-container">
-        <form id="loginForm">
+        <form id="loginForm" method="Post">
             <h2>Log In</h2>
             <input type="text" id="identifier" placeholder="Username or Email" required>
            
@@ -62,7 +99,7 @@
         <button type="submit" class="login-button">Log in</button> 
         <br><br>
         </form>
-        <p>Don't have an account? <a href="/SignUp/signup.html">Sign up instead</a></p>
+        <p>Don't have an account? <a href="/SignUp/signup.php">Sign up instead</a></p>
         <div class="divider">
             
             <span>or</span>
