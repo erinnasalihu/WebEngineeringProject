@@ -1,0 +1,248 @@
+/* Global Variables */
+:root {
+    --primary-color: #3C4F2F;
+    --secondary-color: #FAF3E0;
+    --text-color: #3C4F2F;
+    --border-color: #d2deb8;
+    --success-color: #6c8a4a;
+    --error-color: #dc3545;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 8px 15px rgba(0, 0, 0, 0.3);
+    --transition-base: all 0.3s ease;
+    --border-radius-sm: 8px;
+    --border-radius-md: 15px;
+    --border-radius-lg: 20px;
+}
+
+/* Reset & Base Styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Fredoka One', cursive;
+    background: linear-gradient(to bottom, #f0f7e9, #e2ecc5);
+    color: #3C4F2F;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Fredoka One', cursive;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+/* Common Animations */
+@keyframes backgroundShift {
+
+    0%,
+    100% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Common Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Common Button Styles */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius-sm);
+    border: none;
+    cursor: pointer;
+    font-family: 'Fredoka One', cursive;
+    transition: var(--transition-base);
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Common Card Styles */
+.card {
+    background: white;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-base);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Common header styles */
+header {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6c8a4a;
+    border-style: inset;
+    border-top-color: #A7B98A;
+    border-bottom-color: #191c1a;
+    border-right: #A7B98A;
+    border-left: #d2deb8;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    border-start-end-radius: 1px;
+    border-start-start-radius: 1px;
+}
+
+.logo {
+    width: 150px;
+    justify-items: end;
+    height: auto;
+}
+
+/* Common main content styles */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+    min-height: 65vh;
+}
+
+/* Common footer styles */
+footer {
+    width: 100%;
+    background-color: #6c8a4a;
+    color: #FAF3E0;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+footer a[href^="tel:"] {
+    color: inherit;
+}
+
+footer a[href^="tel:"]:hover {
+    color: #444;
+}
+
+/* Common decorative elements */
+.olive-branch {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 350px;
+    height: auto;
+    pointer-events: none;
+}
+
+.olive-branch.left {
+    max-width: 100%;
+    right: 90%;
+    transform: rotate(-15deg);
+}
+
+.olive-branch.right {
+    max-width: 100%;
+    left: 90%;
+    transform: rotate(2deg);
+}
+
+.olive-branch img {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .content {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+}

@@ -1,4 +1,54 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.getElementById('loginForm');
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+    const passwordEyeIcon = document.getElementById('passwordEyeIcon');
 
+    // Toggle password visibility
+    togglePassword.addEventListener('click', function () {
+        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passwordInput.setAttribute('type', type);
+
+        // Toggle eye icon
+        passwordEyeIcon.className = type === 'password' ? 'fa fa-eye' : 'fa fa-eye-slash';
+    });
+
+    // Handle form submission
+    loginForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById('identifier').value;
+        const password = document.getElementById('password').value;
+
+        try {
+            const response = await fetch('LogIn/login_handler.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+                })
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                // Show success message
+                alert(data.message);
+                // Redirect to home page
+                window.location.href = data.redirect;
+            } else {
+                // Show error message
+                alert(data.message);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+        }
+    });
+});
 
 function validateLoginForm(event) {
     event.preventDefault();
@@ -34,26 +84,8 @@ function isValidEmail(input) {
 
 
 function isValidUsername(input) {
-    const usernameRegex = /^[a-zA-Z0-9_.-]+$/; 
+    const usernameRegex = /^[a-zA-Z0-9_.-]+$/;
     return usernameRegex.test(input);
 }
-
-document.getElementById('loginForm').addEventListener('submit', validateLoginForm);
-
-const passwordInput = document.getElementById('password');
-const togglePassword = document.getElementById('togglePassword');
-const passwordEyeIcon = document.getElementById('passwordEyeIcon');
-
-
-togglePassword.addEventListener('click', function () {
-     const currentType = passwordInput.getAttribute('type');
-    
-    const newType = currentType === 'password' ? 'text' : 'password';
-    passwordInput.setAttribute('type', newType);
-
-    
-    passwordEyeIcon.classList.toggle('fa-eye');
-    passwordEyeIcon.classList.toggle('fa-eye-slash');
-});
 
 

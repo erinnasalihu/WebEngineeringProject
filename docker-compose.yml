@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: oliveroot
+      MYSQL_DATABASE: olive
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./migrations.sql:/docker-entrypoint-initdb.d/migrations.sql
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-poliveroot"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  migrations:
+    image: mysql:8.0
+    depends_on:
+      mysql:
+        condition: service_healthy
+    command: >
+      /bin/sh -c "mysql -h mysql -u root -poliveroot olive < /migrations/migrations.sql"
+    volumes:
+      - ./migrations.sql:/migrations/migrations.sql
+
+volumes:
+  mysql_data:
