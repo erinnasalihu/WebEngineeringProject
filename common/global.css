@@ -145,7 +145,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #6c8a4a;
+    background-color: #3C4F2F !important;
     border-style: inset;
     border-top-color: #A7B98A;
     border-bottom-color: #191c1a;
