@@ -22,17 +22,17 @@ class DatabaseConnection
 
     public function __construct($config = null)
     {
-        // Use default config if none provided
+       
         $config = $config ?? self::getDefaultConfig();
 
-        // Default values
+        
         $this->servername = $config['host'] ?? '127.0.0.1';
         $this->username = $config['username'] ?? 'root';
         $this->password = $config['password'] ?? 'oliveroot';
         $this->db_name = $config['database'] ?? 'olive';
         $this->db_port = $config['port'] ?? 3306;
 
-        // Default PDO options
+       
         $this->options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -55,7 +55,7 @@ class DatabaseConnection
                 $this->conn = new PDO($dsn, $this->username, $this->password, $this->options);
                 return $this->conn;
             } catch (PDOException $e) {
-                // Log error safely without exposing sensitive information
+                
                 error_log("Database connection failed: " . $e->getMessage());
                 throw new Exception("Database connection failed. Please check the logs or contact support.");
             }

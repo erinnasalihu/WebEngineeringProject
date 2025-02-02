@@ -2,11 +2,11 @@
 require_once '../common/header/header.php';
 require_once '../connection/connect.php';
 
-// Initialize database connection
+
 $dbConnection = new DatabaseConnection();
 $pdo = $dbConnection->startConnection();
 
-// Process the search
+
 $category = $_GET['category'] ?? '';
 $keywords = $_GET['keywords'] ?? '';
 
