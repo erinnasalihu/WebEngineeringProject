@@ -7,24 +7,21 @@
     <link rel="stylesheet" href="sweet.css">
 </head>
 <body>
-    <header>
+<header>
         <div class="olive-branch left">
-            <img src="/HomePage/Home/olive-1.png" alt="Left Olive Branch">
+            <img src="../../common/images/olive-1.png" alt="Left Olive Branch">
         </div>
         <div class="olive-branch right">
-            <img src="/HomePage/Home/olive-2.png" alt="Right Olive Branch">
+            <img src="../../common/images/olive-2.png" alt="Right Olive Branch">
         </div>
-        <div class="top">
-            <h4>Your Ingredients, Our Inspiration </h4> 
-        </div>
+        
         <div class="header-container">
             <div class="header-left">
-                <img src="/HomePage/Home/THOK-logo.png" alt="Logo" class="logo">
+                <img src="../../common/images/THOK-logo.png" alt="Logo" class="logo">
                 <nav class="navbar">
-                    <a href="/Home/index.php">Home</a>
-                    <a href="/AboutUs/index.php">AboutUs</a>
-                    <a href="/HomePage/Ingredients/ingredients.html">Ingredients</a>
-                    <a href="/HomePage/Profile/profile.html">Profile</a>
+                    <a href="../index.php">Home</a>
+                    <a href="../../Ingredients/index.php">Ingredients</a>
+                    <a href="../../AboutUs/index.php">AboutUs</a>
                 </nav>
             </div>
             <div class="header-right">
@@ -32,17 +29,14 @@
                 <div class="search-container">
                     <input type="text" placeholder="Search" class="search-bar">
                 </div>
-                <span class="search-icon"></span>
-                <div class="profile-icon">
-                    <img src="/HomePage/Home/search-icon.png" alt="search">
-                </div>
+            
                 <div class="header-actions">
                     <div class="profile-icon" onclick="toggleProfileMenu()">
-                        <img src="/HomePage/Home/profile-icon.png" alt="profile-icon">
+                        <img src="../../common/images/profile-icon.png" alt="profile-icon">
                     </div>
                     <div class="profile-menu">
-                        <a href="/LogIn/login.php">Log In</a>
-                        <a href="/SignUp/signup.php">Sign Up</a>
+                        <a href="../../LogIn/login.php">Log In</a>
+                        <a href="../../SignUp/signup.php">Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -84,8 +78,6 @@
     
     
         <script src="sweet.js"></script>
-        <footer>
-            © 2024 All rights reserved | Contact us: <a href="tel:">+123-456-7890</a>
-        </footer>
+        <?php include '../../common/footer/footer.php'?>
 </body>
 </html>
