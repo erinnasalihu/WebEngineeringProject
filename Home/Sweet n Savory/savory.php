@@ -4,28 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="savory.css">
-    <title>Document</title>
+    
+
+    <title>Savory</title>
 </head>
 <body>
     <header>
         <div class="olive-branch left">
-            <img src="/Home/olive-1.png" alt="Left Olive Branch">
+            <img src="../../common/images/olive-1.png" alt="Left Olive Branch">
         </div>
         <div class="olive-branch right">
-            <img src="/Home/olive-2.png" alt="Right Olive Branch">
+            <img src="../../common/images/olive-2.png" alt="Right Olive Branch">
         </div>
-        <div class="top">
-            <h4>Your Ingredients, Our Inspiration </h4> 
-        </div>
+        
         <div class="header-container">
             <div class="header-left">
-                <img src="/Home/THOK-logo.png" alt="Logo" class="logo">
+                <img src="../../common/images/THOK-logo.png" alt="Logo" class="logo">
                 <nav class="navbar">
-                    <a href="/Home/index.php">Home</a>
-                    <a href="/HomePage/About/about.html">AboutUs</a>
-                    <a href="/HomePage/Ingredients/ingredients.html">Ingredients</a>
-                    <a href="/HomePage/Profile/profile.html">Profile</a>
+                    <a href="../index.php">Home</a>
+                    <a href="../../AboutUs/index.php">AboutUs</a>
+                    <a href="../../Ingredients/index.php">Ingredients</a>
                 </nav>
             </div>
             <div class="header-right">
@@ -33,17 +33,14 @@
                 <div class="search-container">
                     <input type="text" placeholder="Search" class="search-bar">
                 </div>
-                <span class="search-icon"></span>
-                <div class="profile-icon">
-                    <img src="/HomePage/Home/search-icon.png" alt="search">
-                </div>
+            
                 <div class="header-actions">
                     <div class="profile-icon" onclick="toggleProfileMenu()">
-                        <img src="/HomePage/Home/profile-icon.png" alt="profile-icon">
+                        <img src="../../common/images/profile-icon.png" alt="profile-icon">
                     </div>
                     <div class="profile-menu">
-                        <a href="/LogIn/login.php">Log In</a>
-                        <a href="/SignUp/signup.php">Sign Up</a>
+                        <a href="../../LogIn/login.php">Log In</a>
+                        <a href="../../SignUp/signup.php">Sign Up</a>
                     </div>
                 </div>
             </div>
