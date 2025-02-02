@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,8 +42,8 @@
                         <img src="/HomePage/Home/profile-icon.png" alt="profile-icon">
                     </div>
                     <div class="profile-menu">
-                        <a href="/LogIn/login.html">Log In</a>
-                        <a href="/SignUp/signup.html">Sign Up</a>
+                        <a href="/LogIn/login.php">Log In</a>
+                        <a href="/SignUp/signup.php">Sign Up</a>
                     </div>
                 </div>
             </div>

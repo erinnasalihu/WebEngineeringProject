@@ -21,8 +21,8 @@
             <div class="header-left">
                 <img src="/HomePage/Home/THOK-logo.png" alt="Logo" class="logo">
                 <nav class="navbar">
-                    <a href="/HomePage/Home/home.php">Home</a>
-                    <a href="/HomePage/About/about.html">AboutUs</a>
+                    <a href="/Home/index.php">Home</a>
+                    <a href="/AboutUs/index.php">AboutUs</a>
                     <a href="/HomePage/Ingredients/ingredients.html">Ingredients</a>
                     <a href="/HomePage/Profile/profile.html">Profile</a>
                 </nav>
@@ -41,8 +41,8 @@
                         <img src="/HomePage/Home/profile-icon.png" alt="profile-icon">
                     </div>
                     <div class="profile-menu">
-                        <a href="/LogIn/login.html">Log In</a>
-                        <a href="/SignUp/signup.html">Sign Up</a>
+                        <a href="/LogIn/login.php">Log In</a>
+                        <a href="/SignUp/signup.php">Sign Up</a>
                     </div>
                 </div>
             </div>

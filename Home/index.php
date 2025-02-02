@@ -7,14 +7,14 @@ include '../common/header/header.php';
     <h1 class="wave-text">What are we making today, Chef?</h1>
     <div class="categories">
         <div class="category">
-            <a href="Sweet n Savory/sweet.html">
+            <a href="Sweet n Savory/sweet.php">
                 <img src="Sweet n Savory/Sweet.jpg" alt="Sweet">
                 <span class="category-title">Sweet</span>
             </a>
         </div>
         <div class="or-divider">or</div>
         <div class="category">
-            <a href="Sweet n Savory/savory.html">
+            <a href="Sweet n Savory/savory.php">
                 <img src="Sweet n Savory/Savory.jpg" alt="Savory">
                 <span class="category-title">Savory</span>
             </a>
