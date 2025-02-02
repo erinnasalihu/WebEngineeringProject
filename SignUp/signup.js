@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Properly decode the message
                     const decodedMessage = decodeURIComponent(JSON.parse(JSON.stringify(data.message)));
                     alert(decodedMessage);
-                    window.location.href = '/LogIn/index.php';
+                    window.location.href = '/WebEngineeringProject/LogIn/index.php';
                 } else {
                     const decodedMessage = decodeURIComponent(JSON.parse(JSON.stringify(data.message)));
                     alert(decodedMessage);

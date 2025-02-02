@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             try {
                 console.log('Uploading file:', file.name, 'Type:', file.type);
-                const response = await fetch('Profile/update_photo.php', {
+                const response = await fetch('/WebEngineeringProject/Profile/update_photo.php', {
                     method: 'POST',
                     body: formData
                 });
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         try {
-            const response = await fetch('Profile/update_profile.php', {
+            const response = await fetch('/WebEngineeringProject/Profile/update_profile.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Handle logout
     window.logout = async function () {
         try {
-            const response = await fetch('Profile/logout.php');
+            const response = await fetch('/WebEngineeringProject/Profile/logout.php');
             const data = await response.json();
             if (data.success) {
                 window.location.href = '/LogIn/index.php';
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 category: document.getElementById('editCategory').value
             };
 
-            const response = await fetch('Profile/update_recipe.php', {
+            const response = await fetch('/WebEngineeringProject/Profile/update_recipe.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Update the loadUserRecipes function to include data attributes
     async function loadUserRecipes() {
         try {
-            const response = await fetch('Profile/get_user_recipes.php');
+            const response = await fetch('/WebEngineeringProject/Profile/get_user_recipes.php');
             const data = await response.json();
 
             const recipesTableBody = document.querySelector('#userRecipes tbody');
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         try {
-            const response = await fetch('Profile/delete_recipe.php', {
+            const response = await fetch('/WebEngineeringProject/Profile/delete_recipe.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 category: document.getElementById('newCategory').value
             };
 
-            const response = await fetch('Profile/add_recipe.php', {
+            const response = await fetch('/WebEngineeringProject/Profile/add_recipe.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

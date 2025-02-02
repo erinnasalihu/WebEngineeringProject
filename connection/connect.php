@@ -12,9 +12,9 @@ class DatabaseConnection
     public static function getDefaultConfig()
     {
         return [
-            'host' => '127.0.0.1',
+            'host' => 'localhost',
             'username' => 'root',
-            'password' => 'oliveroot',
+            'password' => '',
             'database' => 'olive',
             'port' => 3306
         ];

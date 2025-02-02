@@ -80,7 +80,7 @@ session_start();
                         <img src="../common/images/profile-icon.png" alt="Profile">
                         <div class="login-popover">
                             <a href="../Login">Log In</a>
-                            <a href="../Register">Sign Up</a>
+                            <a href="../SignUp">Sign Up</a>
                         </div>
                     </div>
                 <?php endif; ?>

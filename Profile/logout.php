@@ -16,5 +16,5 @@ if (isset($_COOKIE[session_name()])) {
 session_destroy();
 
 // Redirect to home page
-header("Location: /Home");
+header("Location: /WebEngineeringProject/Home");
 exit;

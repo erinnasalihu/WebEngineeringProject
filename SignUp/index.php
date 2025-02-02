@@ -49,7 +49,7 @@
             <button type="submit" class="signup-button">Sign Up</button>
 
             <div class="have-acc">
-                <p>Have an account? <a href="/LogIn/index.php">Log in instead</a></p>
+                <p>Have an account? <a href="/WebEngineeringProject/LogIn/index.php">Log in instead</a></p>
             </div>
         </form>
     </div>

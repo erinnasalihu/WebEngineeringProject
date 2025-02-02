@@ -3,7 +3,7 @@ require '../connection/connect.php';
 
 // If user is already logged in, redirect to home page
 if (isset($_SESSION['user_id'])) {
-    header("Location: /Home/index.php");
+    header("Location: /WebEngineeringProject/Home");
     exit;
 }
 
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 include '../common/header/header.php';
 ?>
 
-<link rel="stylesheet" href="LogIn/login.css" preload>
+<link rel="stylesheet" href="login.css" preload>
 
 <div class="login-container">
     <form id="loginForm">
@@ -63,7 +63,7 @@ include '../common/header/header.php';
 
 
 </div>
-<script src="LogIn/login.js"></script>
+<script src="login.js"></script>
 
 <?php
 include '../common/footer/footer.php';

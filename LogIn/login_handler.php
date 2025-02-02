@@ -44,7 +44,7 @@ try {
     echo json_encode([
         'success' => true,
         'message' => 'Login successful',
-        'redirect' => '/Home/index.php'
+        'redirect' => '/WebEngineeringProject/Home/index.php'
     ]);
 } catch (Exception $e) {
     http_response_code(400);

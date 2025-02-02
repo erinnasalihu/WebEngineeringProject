@@ -22,13 +22,13 @@ try {
 }
 ?>
 
-<link rel="stylesheet" href="Profile/profile.css">
+<link rel="stylesheet" href="/WebEngineeringProject/Profile/profile.css">
 
 <main class="profile-main container">
     <div class="profile-container">
         <div class="profile-header">
             <div class="profile-photo-container">
-                <img id="profilePhoto" src="Profile/get_profile_photo.php" onerror="this.src='/Profile/default-avatar.png'" alt="Profile Photo" class="profile-photo">
+                <img id="profilePhoto" src="get_profile_photo.php" onerror="this.src='/WebEngineeringProject/Profile/default-avatar.png'" alt="Profile Photo" class="profile-photo">
                 <div class="upload-photo">
                     <label for="photoUpload" class="upload-btn">
                         <i class="fas fa-camera"></i>
@@ -40,7 +40,7 @@ try {
             <div class="profile-info">
                 <div class="username-container">
                     <h1><?php echo htmlspecialchars($user['username']); ?></h1>
-                    <a href="../LogIn/logout.php" class="btn btn-logout">
+                    <a href="logout.php" class="btn btn-logout">
                         <i class="fas fa-sign-out-alt"></i> Logout
                     </a>
                 </div>
@@ -99,7 +99,7 @@ try {
 </main>
 
 
-<script src="Profile/profile.js"></script>
+<script src="profile.js"></script>
 
 <!-- Add Recipe Modal -->
 <div id="addRecipeModal" class="modal">
